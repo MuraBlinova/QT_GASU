@@ -78,7 +78,7 @@ Widget::Widget(QWidget *parent) : QWidget(parent), ui(new Ui::Widget) {
     connect(player, SIGNAL(HealthChanged(int)), healthBar, SLOT(SetCurrentValue(int)));
     connect(indicativeValueSlider, SIGNAL(valueChanged(int)), healthBar, SLOT(SetIndicativeValue(int)));
     connect(indicativeValueSlider, &QSlider::valueChanged, player, &Player::UpgradeHealth);
-    //строчка ниже - почему-то не срабатывает переключение цвета при движении ползунка, в актуальной на момент написания комментария версии
+    //строчка ниже - почему-то не срабатывает переключение цвета при движении ползунка, в актуальной, на момент написания комментария, версии
     // за переключение отвечает строка перед комментарием
 //    connect(indicativeValueSlider, SIGNAL(valueChanged()), player, SLOT(UpgradeHealth()));
 
